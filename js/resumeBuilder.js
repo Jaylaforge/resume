@@ -1,25 +1,27 @@
-var name = "Jay LaForge"
-var formattedName =
-    HTMLheaderName.replace("%data%", name);
-var role = "Applications Developer"
-var formattedRole =
-    HTMLheaderRole.replace("%data%", role);
 
-$("#header").prepend(formattedRole);
-$("#header").prepend(formattedName);
+
 
 var bio = {
-    "name" : name,
-    "role" : role,
-    "contatctInformation": [{"email" : " jaylaforge2@gmail.com", "cell" : " (864)554-1986", "GitHub" : " Jaylaforge", "location" : " Greenwood,SC"}],
+    "name" : "Jay LaForge",
+    "role" : "Applications Developer",
+    "contatctInformation": {"email" : " jaylaforge2@gmail.com", "mobile" : " (864) 554-1986", "GitHub" : " Jaylaforge", "location" : " Greenwood,SC"},
     "myPicture" : "images/me.jpg" ,
     "welcomeMessage" : "Welcome to my resume built using JavaScript!",
     "skills" : "I am proficient in JavaScript and HTML. I am currently working on SQL and would love to help your company by learning and utilizing any language you may need."
+    
 };
+var formattedMoble =
+    HTMLmobile.replace("%data%", bio.contatctInformation.mobile)
 var formattedEmail =
-HTMLemail.replace("%data%", bio.contatctInformation.email);
-   
+    HTMLemail.replace("%data%", bio.contatctInformation.email);
+var formattedName =
+    HTMLheaderName.replace("%data%", bio.name);
+var formattedRole =
+    HTMLheaderRole.replace("%data%", bio.role);   
+$("#header").prepend(formattedRole);
+$("#header").prepend(formattedName);
 $("#header").append(formattedEmail);
+$("#header").append(formattedMoble);
 
 
 var work = {};
@@ -28,7 +30,7 @@ var work = {};
     work.years = 3;
     work.city = " Greenwood, SC";
 
-$("#main").append(work.position1);
+//$("#main").append(work.position1);
 
 var eductation = {
     "schools": [
