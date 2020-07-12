@@ -1,7 +1,7 @@
 var name = "Jay LaForge"
 var formattedName =
     HTMLheaderName.replace("%data%", name);
-var role = "Web Developer"
+var role = "Applications Developer"
 var formattedRole =
     HTMLheaderRole.replace("%data%", role);
 
